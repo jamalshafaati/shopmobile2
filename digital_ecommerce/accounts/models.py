@@ -17,9 +17,7 @@ class User(AbstractBaseUser):
     is_admin = models.BooleanField(default=False)
 
     USERNAME_FIELD = 'email'  # unique must be True #this field is for authenticate by email or username or ...
-
     objects = UserManager()
-
     def __str__(self):
         return self.email
 
