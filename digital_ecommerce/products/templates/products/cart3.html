@@ -1,0 +1,288 @@
+{% extends 'home/shared/MainLayot.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="fa">
+
+<!-- Mirrored from demo.iranlayer.com/bonizkala/cart3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Nov 2021 05:55:36 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="متن تست است"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="#">
+    <link rel="apple-touch-icon" sizes="60x60" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="76x76" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
+    <link rel="apple-touch-icon" sizes="120x120" href="#">
+    <link rel="apple-touch-icon" sizes="144x144" href="#">
+    <link rel="apple-touch-icon" sizes="152x152" href="#">
+    <link rel="apple-touch-icon" sizes="180x180" href="#">
+    <link rel="icon" type="image/png" sizes="192x192" href="#">
+    <link rel="icon" type="image/png" sizes="32x32" href="#">
+    <link rel="icon" type="image/png" sizes="96x96" href="#">
+    <link rel="icon" type="image/png" sizes="16x16" href="#">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>عنوان صفحه</title>
+    <link href="{% static 'css/bootstrap3.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/s.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="_m_search_overlay"></div>
+
+<!-- Header place-->
+
+<div class="_p_mainBody">
+    <div class="container">
+        <div class="_m_breadcrumb">
+            <ul class="breadcrumb">
+                <li><a href="https://iranrenter.com/">خانه</a></li>
+                <li class="active">سبد خرید</li>
+            </ul>
+        </div>
+        <div class="_p_frame">
+            <div class="row">
+                <div class="_d_basket_page">
+                    <div class="clearfix"></div>
+                    <div id="user-default-address-container" style=" ">
+                        <div class="user-default-address-container">
+                            <div class="address_custom col-md-10">
+                                <span class="name_address_custom">گیرنده :‌ محمد هاشمی طالب بیگی</span>
+                                <span class="c-checkout-contact__btn-edit" data-toggle="modal"
+                                      data-target=".address_modal">اصلاح این آدرس</span>
+                                <div>
+                                    <span class="mobile_address_custom">شماره تماس: ۰۹۳۶۲۸۷۶۳۸۲</span>
+                                    <span class="message_address_custom">کد پستی: ۷۴۱۷۹۴۶۴۸۳</span>
+                                </div>
+                                <span class="address_address_custom">استان فارس ، ‌شهرستان سروستان، روستای طالب بیگی</span>
+                            </div>
+                            <div class="col-md-2">
+                                <button class="btn_address_custom" style="margin: 15px 0"
+                                        onClick="change_address_btn_click()">تغییر آدرس ارسال
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div id="user-address-list-container" style="display:none">
+                        <div class="c-checkout-address__headline">آدرس مورد نظر خود را جهت تحویل انتخاب فرمایید:</div>
+                        <div class="c-checkout-address__col">
+                            <button class="c-checkout-address__location " data-toggle="modal"
+                                    data-target=".address_modal"><strong>ایجاد آدرس جدید</strong></button>
+                        </div>
+
+                        <div class="c-checkout-address__box">
+                            <div class="address_custom col-md-8">
+                                <span class="name_address_custom">گیرنده :‌ محمد هاشمی طالب بیگی</span>
+                                <div>
+                                    <span class="mobile_address_custom">شماره تماس: ۰۹۳۶۲۸۷۶۳۸۲</span>
+                                    <span class="message_address_custom">کد پستی: ۷۴۱۷۹۴۶۴۸۳</span>
+                                </div>
+                                <span class="address_address_custom">استان فارس ، ‌شهرستان سروستان، روستای طالب بیگی </span>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn_address_custom">حذف</button>
+                                <button class="btn_address_custom">ویرایش</button>
+                                <button class="btn_address_custom2">آدرس انتخاب شده</button>
+                            </div>
+                        </div>
+                        <div class="c-checkout-address__box">
+                            <div class="address_custom col-md-8">
+                                <span class="name_address_custom">گیرنده :‌ محمد هاشمی طالب بیگی</span>
+                                <div>
+                                    <span class="mobile_address_custom">شماره تماس: ۰۹۳۶۲۸۷۶۳۸۲</span>
+                                    <span class="message_address_custom">کد پستی: ۷۴۱۷۹۴۶۴۸۳</span>
+                                </div>
+                                <span class="address_address_custom">استان فارس ، ‌شهرستان سروستان، روستای طالب بیگی </span>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn_address_custom">حذف</button>
+                                <button class="btn_address_custom">ویرایش</button>
+                                <button class="btn_address_custom2">ارسال سفارش به این آدرس</button>
+                            </div>
+
+                        </div>
+
+                        <button class="c-checkout-address__cancel" onclick="cancel_change_address_btn()"></button>
+                    </div>
+                    <div class="clearfix"></div>
+                    <br>
+                    <div class="c-checkout-price-options__container">
+                        <span class="c-checkout-price-options__header">استفاده از کد تخفیف بونیزکالا</span>
+                        <p class="c-checkout-price-options__description">با ثبت کد تخفیف، مبلغ کد تخفیف از “مبلغ قابل
+                            پرداخت” کسر می‌شود.</p>
+                        <form>
+                            <div class="col-lg-4 col-md-5 col-sm-6">
+                                <input class="c-ui-input__field" placeholder="مثلا: s3Fm5c" type="text" name="">
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-4 ">
+                                <button class="btn-primary" type="button">ثبت کد تخفیف</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="clearfix"></div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+
+                        </div>
+                        <div class="col-md-6">
+                            <div class="_d_result_holder">
+                                <div class="_d_result_box">
+                                    <div class="_d_item_holder _d_total">
+                                        <div class="_d_caption">مبلغ قابل پرداخت:</div>
+                                        <div class="_d_value">
+                                            <span class="_d_price">۱,۹۲۴,۰۰۰</span>
+                                            <span class="_d_currency">تومان</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <a href="msg.html" type="submit"
+                               class="pull-left _d_fixed_btn _p_green_color_bg _p_btn_success">ادامه ثبت سفارش
+                                <i class="icon fa fa-chevron-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="modal address_modal" id="address_modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span>✖</span></button>
+                <h4>افزودن آدرس جدید</h4>
+            </div>
+            <div class="modal-body">
+                <div class="_m_form_container_custom">
+                    <form method="POST" action="#" accept-charset="UTF-8"
+                          class="form-horizontal _m_profile_form">
+                        <div class="clearfix"></div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label>نام و نام خانوادگی تحویل گیرنده<i class="star">*</i></label>
+                                <div>
+                                    <input class="form-control" name="name" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-2">
+                            <div class="form-group">
+                                <label>شماره موبایل<i class="star">*</i></label>
+                                <div>
+                                    <input class="form-control" name="mobile" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label>استان<i class="star">*</i></label>
+                                <div>
+                                    <div class="_m_select_inline">
+                                        <select class="form-control _m_select_month" name="education">
+                                            <option value="0">اسم استان</option>
+                                            <option value="1">اسم استان</option>
+                                            <option value="2">اسم استان</option>
+                                            <option value="3">اسم استان</option>
+                                            <option value="4">اسم استان</option>
+                                            <option value="5">اسم استان</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-2">
+                            <div class="form-group">
+                                <label>شهر<i class="star">*</i></label>
+                                <div>
+                                    <div class="_m_select_inline">
+                                        <select class="form-control _m_select_month" name="job_title">
+                                            <option value="0">اسم شهر</option>
+                                            <option value="1">اسم شهر</option>
+                                            <option value="2">اسم شهر</option>
+                                            <option value="3">اسم شهر</option>
+                                            <option value="4">اسم شهر</option>
+                                            <option value="5">اسم شهر</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 _m_profile_address">
+                            <div class="form-group">
+                                <label>آدرس پستی<i class="star">*</i></label>
+                                <div class="_m_row">
+                                    <textarea class="form-control" rows="3" name="work_address" cols="50"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>کد پستی<i class="star">*</i></label>
+                                <div>
+                                    <input class="form-control" name="cod" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="_p_flex_between _m_profile_btns">
+                            <a class="btn_address_custom" type="button" class="close" data-dismiss="modal">انصراف</a>
+                            <button type="submit"
+                                    class="_m_btn _m_btn_submit _m_color_white _p_trans _p_green_color_bg btn_submit_custom">
+                                ثبت
+                                اطلاعات
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer place -->
+
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/vendor.js' %}" defer></script>
+<script src="{% static 'js/custom.js' %}" defer></script>
+<script src="{% static 'js/cart.js' %}" defer></script>
+<script>
+    function change_address_btn_click() {
+        var divToPrint = document.getElementById('user-default-address-container');
+        divToPrint.setAttribute('style', 'display: none; ');
+        var divToPrint = document.getElementById('user-address-list-container');
+        divToPrint.setAttribute('style', 'display: block; ');
+    }
+
+    function cancel_change_address_btn() {
+        var divToPrint = document.getElementById('user-default-address-container');
+        divToPrint.setAttribute('style', 'display: block; ');
+        var divToPrint = document.getElementById('user-address-list-container');
+        divToPrint.setAttribute('style', 'display: none; ');
+    }
+</script>
+
+</body>
+
+<!-- Mirrored from demo.iranlayer.com/bonizkala/cart3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Nov 2021 05:55:36 GMT -->
+</html>
+{% endblock %}

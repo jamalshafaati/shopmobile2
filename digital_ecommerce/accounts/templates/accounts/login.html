@@ -1,0 +1,98 @@
+{% extends 'home/shared/MainLayot.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="fa">
+
+<!-- Mirrored from demo.iranlayer.com/bonizkala/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Nov 2021 05:55:26 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="متن تست است"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="#">
+    <link rel="apple-touch-icon" sizes="60x60" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="76x76" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
+    <link rel="apple-touch-icon" sizes="120x120" href="#">
+    <link rel="apple-touch-icon" sizes="144x144" href="#">
+    <link rel="apple-touch-icon" sizes="152x152" href="#">
+    <link rel="apple-touch-icon" sizes="180x180" href="#">
+    <link rel="icon" type="image/png" sizes="192x192" href="#">
+    <link rel="icon" type="image/png" sizes="32x32" href="#">
+    <link rel="icon" type="image/png" sizes="96x96" href="#">
+    <link rel="icon" type="image/png" sizes="16x16" href="#">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>عنوان صفحه</title>
+    <link href="{% static 'css/bootstrap3.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/s.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="_m_search_overlay"></div>
+
+<!-- Header place-->
+
+<div class="_p_mainBody">
+    <div class="container">
+        <div class="_p_frame _p_small_frame">
+            <div class="_m_form_container">
+                <div class="_p_outer_title _p_small_title">
+                    ورود به بونیز کالا
+                </div>
+                <div class="_m_form">
+                    <form method="POST" action="#">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label>{{ form.email.label }}</label>
+                            {{ form.email }}
+                            <span class="_m_input_error_txt">آدرس ایمیل را وارد کنید</span>
+                        </div>
+                        <div class="form-group">
+                            <label>کلمه عبور</label>
+                            <input class="form-control _p_dir_ltr" type="password" name="password" required
+                                   placeholder="Password">
+                            <span class="_m_input_error_txt">.</span>
+                        </div>
+                        <div class="_m_remember_form _p_flex_between">
+                            <label class="_m_custom_checkbox">مرا به خاطر بسپار
+                                <input type="checkbox" name="remember">
+                                <span class="checkmark"></span>
+                            </label>
+                            <a class="_m_recovery_password" href="password-reset.html">بازیابی کلمه عبور</a>
+                        </div>
+                        <button type="submit" class="_m_btn_block _p_trans _p_orange_color_bg">وارد شوید
+                        </button>
+                        <div class="_m_login_link">
+                            <span>اگر قبلا در بونیز کالا ثبت نام نکرده اید، <a
+                                    href="register.html">ثبت نام کنید!</a></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="_m_img_form">
+                    <span class="icon icon-User"></span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer place-->
+
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/vendor.js' %}" defer></script>
+<script src="{% static 'js/custom.js' %}" defer></script>
+
+</body>
+<!-- Mirrored from demo.iranlayer.com/bonizkala/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Nov 2021 05:55:27 GMT -->
+</html>
+{% endblock %}

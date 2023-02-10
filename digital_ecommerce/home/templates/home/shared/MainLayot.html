@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+{% include 'home/shared/Header.html'%}
+{% include 'home/msg.html'%}
+{% block content %}
+
+{% endblock %}
+{% include 'home/shared/Footer.html' %}
+</body>
+</html>

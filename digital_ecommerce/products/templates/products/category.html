@@ -1,0 +1,635 @@
+{% extends 'home/shared/MainLayot.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="fa">
+
+<!-- Mirrored from demo.iranlayer.com/bonizkala/category.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Nov 2021 05:55:19 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="متن تست است"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="#">
+    <link rel="apple-touch-icon" sizes="60x60" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="76x76" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
+    <link rel="apple-touch-icon" sizes="120x120" href="#">
+    <link rel="apple-touch-icon" sizes="144x144" href="#">
+    <link rel="apple-touch-icon" sizes="152x152" href="#">
+    <link rel="apple-touch-icon" sizes="180x180" href="#">
+    <link rel="icon" type="image/png" sizes="192x192" href="#">
+    <link rel="icon" type="image/png" sizes="32x32" href="#">
+    <link rel="icon" type="image/png" sizes="96x96" href="#">
+    <link rel="icon" type="image/png" sizes="16x16" href="#">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>عنوان صفحه</title>
+    <link href="{% static 'css/bootstrap3.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/s.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="_m_search_overlay"></div>
+
+<!-- Header place -->
+
+<div class="_p_mainBody">
+    <div class="container">
+        <div class="_m_breadcrumb">
+            <ul class="breadcrumb">
+                <li><a href="product.html">خانه</a></li>
+                <li class="active">وسایل دیجیتال</li>
+            </ul>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="_p_frame _p_frame_custom">
+                    <div class="filter">
+                        <button class="btn-filter text-right" id="js-filter1" data-toggle="collapse"
+                                data-target="#collapse1">جستجو در نتایج<i class="fa fa-angle-left pull-left"></i>
+                        </button>
+                        <div id="collapse1" class="collapse css-filter1">
+                            <form>
+                                <div class=" search_custom form_col_custom">
+                                    <div class="icon-search-custom"><input type="text" class="_d_input_search_custom "
+                                                                           value="" name="searchInput"
+                                                                           placeholder="نام محصول یا برند مورد نظر را بنویسید…">
+                                    </div>
+                                </div>
+                                <div class="_d_btn_custom_div">
+                                    <button class="_m_btn _m_btn_submit _p_trans _p_gray_color_bg _d_btn_custom "
+                                            type="submit">اعمال تغییرات
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="_p_frame _p_frame_custom">
+                    <div class="filter">
+                        <button class="btn-filter text-right" id="js-filter2" data-toggle="collapse"
+                                data-target="#collapse2">قیمت<i class="fa fa-angle-left pull-left"></i></button>
+                        <div id="collapse2" class="collapse css-filter1 text-center">
+
+                            <form>
+                                <span class="_d_span_price_custom2"> از </span>
+                                <div class="_d_div_price_custom2"><input type="text" class="_d_input_price_custom"><span
+                                        class="_d_span_price_custom">تومان</span></div>
+                                <span class=""> تا </span>
+                                <div class="_d_div_price_custom2"><input type="text" class="_d_input_price_custom"><span
+                                        class="_d_span_price_custom">تومان</span></div>
+                                <div class="_d_btn_custom_div">
+                                    <button class="_m_btn _m_btn_submit _p_trans _p_gray_color_bg _d_btn_custom "
+                                            type="submit">اعمال تغییرات
+                                    </button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="_p_frame _p_frame_custom">
+                    <div class="filter">
+                        <button class="btn-filter text-right" id="js-filter3" data-toggle="collapse"
+                                data-target="#collapse3">لیست<i class="fa fa-angle-left pull-left"></i></button>
+                        <div id="collapse3" class="collapse css-filter1 ">
+
+                            <form>
+                                <ul>
+                                    <li><a href="#">
+                                        <div class="checkbox"><label><input type="checkbox" name="">متن مورد نظر</label>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <div class="checkbox"><label><input type="checkbox" name="">متن مورد نظر</label>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <div class="checkbox"><label><input type="checkbox" name="">متن مورد نظر</label>
+                                        </div>
+                                    </a></li>
+                                    <li><a href="#">
+                                        <div class="checkbox"><label><input type="checkbox" name="">متن مورد نظر</label>
+                                        </div>
+                                    </a></li>
+                                </ul>
+                                <div class="_d_btn_custom_div">
+                                    <button class="_m_btn _m_btn_submit _p_trans _p_gray_color_bg _d_btn_custom "
+                                            type="submit">اعمال تغییرات
+                                    </button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="_p_frame">
+            <div class="row">
+                <div>
+                    <div class="_m_product_list">
+                        <div class="_d_sort_btn_nav">
+                            <div class="_d_sort_btn">
+                                <span>مرتب سازی</span>
+                                <i class="fa fa-sort-amount-desc"></i>
+                            </div>
+                        </div>
+                        <nav class="_d_sort_holder">
+                            <div class="center">
+                                <div class="_d_sort_nav">
+                                    <div class="_d_head">
+                                        <span>مرتب سازی بر اساس </span>
+                                        <i class="fa fa-close"></i>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                    <div class="_d_sort_item active">
+                                        <a href="#">
+                                            جدیدترین ها
+                                        </a>
+                                    </div>
+                                    <div class="_d_sort_item ">
+                                        <a href="#">
+                                            پرفروشترین ها
+                                        </a>
+                                    </div>
+                                    <div class="_d_sort_item ">
+                                        <a href="#">
+                                            ارزان ترین‌ها
+                                        </a>
+                                    </div>
+                                    <div class="_d_sort_item ">
+                                        <a href="#">
+                                            گرانترین ها
+                                        </a>
+                                    </div>
+                                    <div class="_d_sort_item ">
+                                        <a href="#">
+                                            محبوبترین
+                                        </a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </nav>
+                        <ol>
+                            <li class="col-md-3 col-sm-6 col-xs-6 _m_item">
+                                <div class="_p_frame">
+                                    <div class="_img_product_list">
+                                        <a href="product.html">
+                                            <img src="{% static 'img/product/samsung_sm_v.jpg' %}" alt="samsung_sm_v" title="">
+                                        </a>
+                                    </div>
+                                    <div class="_m_info_product_list">
+                                        <section class="_color_product_list">
+                                            <span style="background-color: #191970;" data-toggle="tooltip"
+                                                  title="سورمه ای"></span>
+                                        </section>
+                                        <div class="_name_product_list">ساعت هوشمند سامسونگ مدل Gear Sport SM-R600NZB
+                                        </div>
+                                        <div class="_price_monthly_product_list">
+                                            <span>۱۲ماهه</span>
+                                            <div class="_price_holder">
+                                                <span class="_price" data-price="true">۲۸۰,۰۰۰</span>
+                                                <span class="_toman">تومان</span>
+                                            </div>
+                                        </div>
+                                        <section class="_price_prepayment_product_list">
+                                            <span class="_caption">بدون پیش پرداخت</span>
+                                        </section>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li class="col-md-3 col-sm-6 col-xs-6 _m_item">
+                                <div class="_p_frame">
+                                    <div class="_img_product_list">
+                                        <a href="product.html">
+                                            <img src="{% static 'img/product/samsung_sm_v.jpg' %}" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="_m_info_product_list">
+                                        <section class="_color_product_list">
+                                            <span style="background-color: #191970;" data-toggle="tooltip"
+                                                  title="سورمه ای"></span>
+                                        </section>
+                                        <div class="_name_product_list">ساعت هوشمند سامسونگ مدل Gear Sport SM-R600NZB
+                                        </div>
+                                        <div class="_price_monthly_product_list">
+                                            <span>۱۲ماهه</span>
+                                            <div class="_price_holder">
+                                                <span class="_price" data-price="true">۲۸۰,۰۰۰</span>
+                                                <span class="_toman">تومان</span>
+                                            </div>
+                                        </div>
+                                        <section class="_price_prepayment_product_list">
+                                            <span class="_caption">بدون پیش پرداخت</span>
+                                        </section>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li class="col-md-3 col-sm-6 col-xs-6 _m_item">
+                                <div class="_p_frame">
+                                    <div class="_img_product_list">
+                                        <a href="product.html">
+                                            <img src="{% static 'img/product/samsung_sm_v.jpg' %}" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="_m_info_product_list">
+                                        <section class="_color_product_list">
+                                            <span style="background-color: #191970;" data-toggle="tooltip"
+                                                  title="سورمه ای"></span>
+                                        </section>
+                                        <div class="_name_product_list">ساعت هوشمند سامسونگ مدل Gear Sport SM-R600NZB
+                                        </div>
+                                        <div class="_price_monthly_product_list">
+                                            <span>۱۲ماهه</span>
+                                            <div class="_price_holder">
+                                                <span class="_price" data-price="true">۲۸۰,۰۰۰</span>
+                                                <span class="_toman">تومان</span>
+                                            </div>
+                                        </div>
+                                        <section class="_price_prepayment_product_list">
+                                            <span class="_caption">بدون پیش پرداخت</span>
+                                        </section>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li class="col-md-3 col-sm-6 col-xs-6 _m_item">
+                                <div class="_p_frame">
+                                    <div class="_img_product_list">
+                                        <a href="product.html">
+                                            <img src="{% static 'img/product/samsung_sm_v.jpg' %}" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="_m_info_product_list">
+                                        <section class="_color_product_list">
+                                            <span style="background-color: #191970;" data-toggle="tooltip"
+                                                  title="سورمه ای"></span>
+                                        </section>
+                                        <div class="_name_product_list">ساعت هوشمند سامسونگ مدل Gear Sport SM-R600NZB
+                                        </div>
+                                        <div class="_price_monthly_product_list">
+                                            <span>۱۲ماهه</span>
+                                            <div class="_price_holder">
+                                                <span class="_price" data-price="true">۲۸۰,۰۰۰</span>
+                                                <span class="_toman">تومان</span>
+                                            </div>
+                                        </div>
+                                        <section class="_price_prepayment_product_list">
+                                            <span class="_caption">بدون پیش پرداخت</span>
+                                        </section>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li class="col-md-3 col-sm-6 col-xs-6 _m_item">
+                                <div class="_p_frame">
+                                    <div class="_img_product_list">
+                                        <a href="product.html">
+                                            <img src="{% static 'img/product/samsung_sm_v.jpg' %}" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="_m_info_product_list">
+                                        <section class="_color_product_list">
+                                            <span style="background-color: #191970;" data-toggle="tooltip"
+                                                  title="سورمه ای"></span>
+                                        </section>
+                                        <div class="_name_product_list">ساعت هوشمند سامسونگ مدل Gear Sport SM-R600NZB
+                                        </div>
+                                        <div class="_price_monthly_product_list">
+                                            <span>۱۲ماهه</span>
+                                            <div class="_price_holder">
+                                                <span class="_price" data-price="true">۲۸۰,۰۰۰</span>
+                                                <span class="_toman">تومان</span>
+                                            </div>
+                                        </div>
+                                        <section class="_price_prepayment_product_list">
+                                            <span class="_caption">بدون پیش پرداخت</span>
+                                        </section>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li class="col-md-3 col-sm-6 col-xs-6 _m_item">
+                                <div class="_p_frame">
+                                    <div class="_img_product_list">
+                                        <a href="product.html">
+                                            <img src="{% static 'img/product/samsung_sm_v.jpg' %}" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="_m_info_product_list">
+                                        <section class="_color_product_list">
+                                            <span style="background-color: #191970;" data-toggle="tooltip"
+                                                  title="سورمه ای"></span>
+                                        </section>
+                                        <div class="_name_product_list">ساعت هوشمند سامسونگ مدل Gear Sport SM-R600NZB
+                                        </div>
+                                        <div class="_price_monthly_product_list">
+                                            <span>۱۲ماهه</span>
+                                            <div class="_price_holder">
+                                                <span class="_price" data-price="true">۲۸۰,۰۰۰</span>
+                                                <span class="_toman">تومان</span>
+                                            </div>
+                                        </div>
+                                        <section class="_price_prepayment_product_list">
+                                            <span class="_caption">بدون پیش پرداخت</span>
+                                        </section>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li class="col-md-3 col-sm-6 col-xs-6 _m_item">
+                                <div class="_p_frame">
+                                    <div class="_img_product_list">
+                                        <a href="product.html">
+                                            <img src="{% static 'img/product/samsung_sm_v.jpg' %}" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="_m_info_product_list">
+                                        <section class="_color_product_list">
+                                            <span style="background-color: #191970;" data-toggle="tooltip"
+                                                  title="سورمه ای"></span>
+                                        </section>
+                                        <div class="_name_product_list">ساعت هوشمند سامسونگ مدل Gear Sport SM-R600NZB
+                                        </div>
+                                        <div class="_price_monthly_product_list">
+                                            <span>۱۲ماهه</span>
+                                            <div class="_price_holder">
+                                                <span class="_price" data-price="true">۲۸۰,۰۰۰</span>
+                                                <span class="_toman">تومان</span>
+                                            </div>
+                                        </div>
+                                        <section class="_price_prepayment_product_list">
+                                            <span class="_caption">بدون پیش پرداخت</span>
+                                        </section>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li class="col-md-3 col-sm-6 col-xs-6 _m_item">
+                                <div class="_p_frame">
+                                    <div class="_img_product_list">
+                                        <a href="product.html">
+                                            <img src="{% static 'img/product/samsung_sm_v.jpg' %}" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="_m_info_product_list">
+                                        <section class="_color_product_list">
+                                            <span style="background-color: #191970;" data-toggle="tooltip"
+                                                  title="سورمه ای"></span>
+                                        </section>
+                                        <div class="_name_product_list">ساعت هوشمند سامسونگ مدل Gear Sport SM-R600NZB
+                                        </div>
+                                        <div class="_price_monthly_product_list">
+                                            <span>۱۲ماهه</span>
+                                            <div class="_price_holder">
+                                                <span class="_price" data-price="true">۲۸۰,۰۰۰</span>
+                                                <span class="_toman">تومان</span>
+                                            </div>
+                                        </div>
+                                        <section class="_price_prepayment_product_list">
+                                            <span class="_caption">بدون پیش پرداخت</span>
+                                        </section>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li class="col-md-3 col-sm-6 col-xs-6 _m_item">
+                                <div class="_p_frame">
+                                    <div class="_img_product_list">
+                                        <a href="product.html">
+                                            <img src="{% static 'img/product/samsung_sm_v.jpg' %}" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="_m_info_product_list">
+                                        <section class="_color_product_list">
+                                            <span style="background-color: #191970;" data-toggle="tooltip"
+                                                  title="سورمه ای"></span>
+                                        </section>
+                                        <div class="_name_product_list">ساعت هوشمند سامسونگ مدل Gear Sport SM-R600NZB
+                                        </div>
+                                        <div class="_price_monthly_product_list">
+                                            <span>۱۲ماهه</span>
+                                            <div class="_price_holder">
+                                                <span class="_price" data-price="true">۲۸۰,۰۰۰</span>
+                                                <span class="_toman">تومان</span>
+                                            </div>
+                                        </div>
+                                        <section class="_price_prepayment_product_list">
+                                            <span class="_caption">بدون پیش پرداخت</span>
+                                        </section>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li class="col-md-3 col-sm-6 col-xs-6 _m_item">
+                                <div class="_p_frame">
+                                    <div class="_img_product_list">
+                                        <a href="product.html">
+                                            <img src="{% static 'img/product/samsung_sm_v.jpg' %}" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="_m_info_product_list">
+                                        <section class="_color_product_list">
+                                            <span style="background-color: #191970;" data-toggle="tooltip"
+                                                  title="سورمه ای"></span>
+                                        </section>
+                                        <div class="_name_product_list">ساعت هوشمند سامسونگ مدل Gear Sport SM-R600NZB
+                                        </div>
+                                        <div class="_price_monthly_product_list">
+                                            <span>۱۲ماهه</span>
+                                            <div class="_price_holder">
+                                                <span class="_price" data-price="true">۲۸۰,۰۰۰</span>
+                                                <span class="_toman">تومان</span>
+                                            </div>
+                                        </div>
+                                        <section class="_price_prepayment_product_list">
+                                            <span class="_caption">بدون پیش پرداخت</span>
+                                        </section>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li class="col-md-3 col-sm-6 col-xs-6 _m_item">
+                                <div class="_p_frame">
+                                    <div class="_img_product_list">
+                                        <a href="product.html">
+                                            <img src="{% static 'img/product/samsung_sm_v.jpg' %}" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="_m_info_product_list">
+                                        <section class="_color_product_list">
+                                            <span style="background-color: #191970;" data-toggle="tooltip"
+                                                  title="سورمه ای"></span>
+                                        </section>
+                                        <div class="_name_product_list">ساعت هوشمند سامسونگ مدل Gear Sport SM-R600NZB
+                                        </div>
+                                        <div class="_price_monthly_product_list">
+                                            <span>۱۲ماهه</span>
+                                            <div class="_price_holder">
+                                                <span class="_price" data-price="true">۲۸۰,۰۰۰</span>
+                                                <span class="_toman">تومان</span>
+                                            </div>
+                                        </div>
+                                        <section class="_price_prepayment_product_list">
+                                            <span class="_caption">بدون پیش پرداخت</span>
+                                        </section>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li class="col-md-3 col-sm-6 col-xs-6 _m_item">
+                                <div class="_p_frame">
+                                    <div class="_img_product_list">
+                                        <a href="product.html">
+                                            <img src="{% static 'img/product/samsung_sm_v.jpg' %}" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="_m_info_product_list">
+                                        <section class="_color_product_list">
+                                            <span style="background-color: #191970;" data-toggle="tooltip"
+                                                  title="سورمه ای"></span>
+                                        </section>
+                                        <div class="_name_product_list">ساعت هوشمند سامسونگ مدل Gear Sport SM-R600NZB
+                                        </div>
+                                        <div class="_price_monthly_product_list">
+                                            <span>۱۲ماهه</span>
+                                            <div class="_price_holder">
+                                                <span class="_price" data-price="true">۲۸۰,۰۰۰</span>
+                                                <span class="_toman">تومان</span>
+                                            </div>
+                                        </div>
+                                        <section class="_price_prepayment_product_list">
+                                            <span class="_caption">بدون پیش پرداخت</span>
+                                        </section>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li class="col-md-3 col-sm-6 col-xs-6 _m_item">
+                                <div class="_p_frame">
+                                    <div class="_img_product_list">
+                                        <a href="product.html">
+                                            <img src="{% static 'img/product/samsung_sm_v.jpg' %}" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="_m_info_product_list">
+                                        <section class="_color_product_list">
+                                            <span style="background-color: #000000;" data-toggle="tooltip"
+                                                  title="مشکی"></span>
+                                        </section>
+                                        <div class="_name_product_list">گوشی موبایل بلک بری مدل KEYone Bronze Edition دو
+                                            سیم کارت ظرفیت 64 گیگابایت
+                                        </div>
+                                        <div class="_price_monthly_product_list">
+                                            <span>۱۲ماهه</span>
+                                            <div class="_price_holder">
+                                                <span class="_price" data-price="true">۴۱۴,۰۰۰</span>
+                                                <span class="_toman">تومان</span>
+                                            </div>
+                                        </div>
+                                        <section class="_price_prepayment_product_list">
+                                            <span>پیش پرداخت</span>
+                                            <span class="_price">۳,۵۰۰,۰۰۰</span>
+                                            <span class="_toman">تومان</span>
+                                        </section>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                        <ol>
+                            <li class="col-md-3 col-sm-6 col-xs-6 _m_item">
+                                <div class="_p_frame">
+                                    <div class="_img_product_list">
+                                        <a href="product.html">
+                                            <img src="{% static 'img/product/samsung_sm_v.jpg' %}" alt="" title="">
+                                        </a>
+                                    </div>
+                                    <div class="_m_info_product_list">
+                                        <section class="_color_product_list">
+                                            <span style="background-color: #000000;" data-toggle="tooltip"
+                                                  title="مشکی"></span>
+                                        </section>
+                                        <div class="_name_product_list">گوشی موبایل اپل مدل iPhone 7 plus ظرفیت 128
+                                            گیگابایت
+                                        </div>
+                                        <span class="badge "
+                                              style="color: #fffff;background-color: #ef5662;margin-bottom: 38px;">ناموجود</span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="_m_pagination text-center">
+                        <ul class="pagination" role="navigation">
+                            <li class="page-item disabled" aria-disabled="true" aria-label="&laquo; قبلی">
+                                <span class="page-link" aria-hidden="true">&lsaquo;</span>
+                            </li>
+                            <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">6</a></li>
+                            <li class="page-item"><a class="page-link" href="#">7</a></li>
+                            <li class="page-item"><a class="page-link" href="#">8</a></li>
+                            <li class="page-item disabled" aria-disabled="true"><span class="page-link">...</span></li>
+                            <li class="page-item"><a class="page-link" href="#">35</a></li>
+                            <li class="page-item"><a class="page-link" href="#">36</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" rel="next" aria-label="بعدی &raquo;">&rsaquo;</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer place -->
+
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/vendor.js' %}" defer></script>
+<script src="{% static 'js/custom.js' %}" defer></script>
+<script src="{% static 'js/search.js' %}" defer></script>
+
+</body>
+
+<!-- Mirrored from demo.iranlayer.com/bonizkala/category.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 09 Nov 2021 05:55:20 GMT -->
+</html>
+{% endblock %}

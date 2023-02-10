@@ -1,0 +1,242 @@
+{% load static %}
+<header id="header_app">
+    <div class="clearfix"></div>
+    <div class="_d_middle_row">
+        <div class="container">
+            <button class="hamburger hamburger--spin hidden-md hidden-lg" type="button">
+<span class="hamburger-box">
+<span class="hamburger-inner"></span>
+</span>
+            </button>
+            <a href="#" class="_d_logo_box" title="">
+                <img src="{% static 'img/logo.png' %}" alt="بونیز کالا" class="_d_big_logo">
+                <img src="{% static 'img/smal_logo.png' %}" alt="بونیز کالا" class="_d_small_logo">
+            </a>
+            <div class="_d_form_holder _p_trans">
+                <form action="#search" method="get" name="#" id="old_search_form">
+                    <div class="_d_close fa fa-close"></div>
+                    <input onkeyup="checkInput()" id="inputBox" type="text" name='q' class="form-control" placeholder="جستجو نام، برند و دسته بندی وسیله"
+                           value="" required autocomplete="off">
+                    <button type="submit" class="_d_btn icon-search"></button>
+
+                    <div id="searchbox" class="d-none">
+                    <div class="_m_suggestion">
+                        <div data-v-44939cec="" class="fulfilling-bouncing-circle-spinner text-center"
+                             style="height: 40px; width: 40px; animation-duration: 4000ms; display: none;">
+                            <div data-v-44939cec="" class="circle"
+                                 style="height: 40px; width: 40px; border-color: rgb(237, 82, 31); color: rgb(237, 82, 31); border-width: 4px; animation-duration: 4000ms;"></div>
+                            <div data-v-44939cec="" class="orbit"
+                                 style="height: 40px; width: 40px; border-color: rgb(237, 82, 31); border-width: 1.2px; animation-duration: 4000ms;"></div>
+                        </div>
+                        <div class="_m_group_search" style="display: block!important;">
+                            <div> <b class="searchContent"></b> در گروه <a href="category.html"> وسایل خانگی </a></div>
+                            <div> <b class="searchContent"></b> در گروه <a href="category.html"> تلویزیون </a></div>
+                        </div>
+                        <div class="_m_detail_search" style="display: block!important;"><a href="product.html">
+                            <div class="img"><img src="{% static 'img/default_product.jpg' %}"></div>
+                            <div>کنسول بازی سونی مدل PS4 Pro Region2 1TB</div>
+                            <div class="payment"><span>۱۲ ماهه | <span class="_m_green">۴۱۴,۰۰۰ <span class="_m_toman">تومان</span></span></span>
+                                <span style="display: none;">پیش پرداخت | <span class="_m_red">null <span
+                                        class="_m_toman">تومان</span></span></span> <span>پیش پرداخت ندارد</span></div>
+                        </a>
+                            <a href="product.html">
+                                <div class="img"><img src="{% static 'img/default_product.jpg' %}" alt="ps4"></div>
+                                <div>کنسول بازی سونی مدل PS4 Slim Region 2 500GB</div>
+                                <div class="payment"><span>۱۲ ماهه | <span class="_m_green">۴۱۴,۰۰۰ <span
+                                        class="_m_toman">تومان</span></span></span>
+                                    <span style="display: none;">پیش پرداخت | <span class="_m_red">null <span
+                                            class="_m_toman">تومان</span></span></span> <span>پیش پرداخت ندارد</span>
+                                </div>
+                            </a>
+                            <a href="product.html">
+                                <div class="img"><img src="{% static 'img/default_product.jpg' %}"></div>
+                                <div>تلویزیون ال ای دی سامسونگ مدل 50NU7900 50inch</div>
+                                <div class="payment"><span>۱۲ ماهه | <span class="_m_green">۴۱۴,۰۰۰ <span
+                                        class="_m_toman">تومان</span></span></span>
+                                    <span style="display: none;">پیش پرداخت | <span class="_m_red">null <span
+                                            class="_m_toman">تومان</span></span></span> <span>پیش پرداخت ندارد</span>
+                                </div>
+                            </a>
+                            <a href="product.html">
+                                <div class="img"><img src="{% static 'img/default_product.jpg' %}"></div>
+                                <div>تلویزیون ال ای دی هوشمند سامسونگ مدل 43NU7900 43inch</div>
+                                <div class="payment"><span>۱۲ ماهه | <span class="_m_green">۴۱۴,۰۰۰ <span
+                                        class="_m_toman">تومان</span></span></span>
+                                    <span style="display: none;">پیش پرداخت | <span class="_m_red">null <span
+                                            class="_m_toman">تومان</span></span></span> <span>پیش پرداخت ندارد</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="_m_detail_search" style="padding: 15px; display: none;">
+                            هیچ محصولی یافت نشد
+                        </div>
+                    </div>
+                    </div>
+                </form>
+<!--                    <searchbox></searchbox>-->
+            </div>
+            <div class="_d_search_btn icon-search _p_trans"></div>
+            <div class="_d_cart_counter">
+                <a href="cart1.html" class="_d_cart_btn _p_trans">
+                    <i class="icon icon-cart-basket2"></i>
+                    <span class="_d_counter">۱</span>
+<!--                    <span class="_d_counter">۰</span>-->
+                </a>
+                <a href="cart1.html">
+                    <span class="_d_caption">سبد خرید</span>
+                </a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="_d_menu_holder">
+        <div class="container">
+            <nav>
+                <ul class="_d_main_menu hidden-xs hidden-sm">
+                    <li>
+                        <h2>
+                            <a href="#" title="" class="_p_trans">
+                                وسایل دیجیتال
+                                <i class="icon fa fa-angle-down _p_trans"></i>
+                            </a>
+                        </h2>
+                        <ul class="_d_megamenu">
+                            <li class="_d_mega_col_holder">
+                                <ul class="_d_mega_col">
+                                    <li class="_d_cat_titile">
+                                        <a href="#" title="" class="_p_trans">موبایل</a>
+                                    </li>
+                                    <li>
+                                        <a href="category.html" title="Apple" class="_p_trans">Apple</a>
+                                    </li>
+                                    <li>
+                                        <a href="category.html" title="Samsung" class="_p_trans">Samsung</a>
+                                    </li>
+                                    <li>
+                                        <a href="category.html" title="Huawei" class="_p_trans">Huawei</a>
+                                    </li>
+                                </ul>
+                                <ul class="_d_mega_col">
+                                    <li class="_d_cat_titile">
+                                        <a href="#" title="لپ تاپ" class="_p_trans">لپ تاپ</a>
+                                    </li>
+                                    <li>
+                                        <a href="category.html" title="Apple" class="_p_trans">Apple</a>
+                                    </li>
+                                    <li>
+                                        <a href="category.html" title="Asus" class="_p_trans">Asus</a>
+                                    </li>
+                                </ul>
+                                <ul class="_d_mega_col">
+                                    <li class="_d_cat_titile">
+                                        <a href="category.html" title="پاوربانک و شارژر" class="_p_trans">پاوربانک و شارژر</a>
+                                    </li>
+                                    <li class="_d_cat_titile">
+                                        <a href="category.html" title="هدفون و هدست" class="_p_trans">هدفون و هدست</a>
+                                    </li>
+                                    <li class="_d_cat_titile">
+                                        <a href="category.html" title="ساعت هوشمند" class="_p_trans">ساعت هوشمند</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="_d_img_box">
+                                <img src="{% static 'img/menu-digital.jpg' %}" alt="">
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="_d_active">
+                        <h2>
+                            <a href="#" title="کارت اعتباری خرید" class="_p_trans">کارت اعتباری خرید</a>
+                        </h2>
+                    </li>
+                    <li class="clearfix _p_noPadding" style="float: none;"></li>
+                </ul>
+            </nav>
+            <div class="_d_mobile_menu_holder hidden-lg">
+                <ul class="_d_mobile_menu _p_trans">
+                    <li class="_p_noMargin">
+                        <a href="#" class="_d_menu_logo">
+                            <img src="{% static 'img/logo.png' %}" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <div class="_d_login_holder_mobile">
+                            <a href="http://localhost:8000/accounts/register/" class="_d_item _d_register">
+                                <i class="icon icon-Lock"></i>
+                                <span class="_d_caption">ورود</span>
+                            </a>
+                            <a href="http://localhost:8000/accounts/register/" class="_d_item _d_login">
+                                <i class="icon icon-User"></i>
+                                <span class="_d_caption">عضویت</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <h2>
+                            <a href="#" title="وسایل دیجیتال" class="_p_trans">وسایل دیجیتال<i
+                                    class="icon fa fa-angle-down _p_trans"></i>
+                            </a>
+                        </h2>
+                        <ul class="_d_submenu">
+                            <li>
+                                <a href="product.html">موبایل <i class="icon fa fa-angle-down _p_trans"></i></a>
+                                <ul class="_m_inner_submenu">
+                                    <li>
+                                        <a href="category.html" title="Apple" class="_p_trans">Apple</a>
+                                    </li>
+                                    <li>
+                                        <a href="category.html" title="Samsung" class="_p_trans">Samsung</a>
+                                    </li>
+                                    <li>
+                                        <a href="category.html" title="Huawei" class="_p_trans">Huawei</a>
+                                    </li>
+                                    <li>
+                                        <a href="category.html" title="HTC" class="_p_trans">HTC</a>
+                                    </li>
+                                    <li>
+                                        <a href="category.html" title="LG" class="_p_trans">LG</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="_d_cat_titile">
+                                <a href="category.html" title="">پاوربانک و شارژر</a>
+                            </li>
+                            <li class="_d_cat_titile">
+                                <h2>
+                                    <a href="category.html" title="">هدفون و هدست</a>
+                                </h2>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="_d_active">
+                        <h2>
+                            <a href="#" title="کارت اعتباری خرید" class="_p_trans">کارت اعتباری خرید</a>
+                        </h2>
+                    </li>
+                </ul>
+            </div>
+            {% if request.user.is_authenticated %}
+            <div class="_d_login_holder">
+                <a href="{% url 'accounts:logout_page' %}" class="_d_item _d_register">
+                    <i class="icon icon-Lock"></i>
+                    <span class="_d_caption">خروج</span>
+                </a>
+            </div>
+            {% else %}
+            <div class="_d_login_holder">
+                <a href="{% url 'accounts:login_page' %}" class="_d_item _d_register">
+                    <i class="icon icon-Lock"></i>
+                    <span class="_d_caption">ورود</span>
+                </a>
+                <a href="{% url 'accounts:register_page' %}" class="_d_item _d_login">
+                    <i class="icon icon-User"></i>
+                    <span class="_d_caption">عضویت</span>
+                </a>
+                {% endif %}
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</header>
