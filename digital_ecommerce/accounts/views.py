@@ -2,32 +2,18 @@ from django.shortcuts import render, redirect
 from django.views import View
 from .models import User
 from .forms import RegisterForm, LoginForm, PasswordResetForm,PasswordResetConfirmForm
-from django.urls import reverse
-from django.http import HttpResponse
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import views as auth_views
-from django.urls import reverse_lazy
-from django.template.loader import render_to_string
 from django.contrib.sites.shortcuts import get_current_site
-from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
-from django.utils.encoding import force_bytes, force_str
-from django.core.mail import EmailMessage,send_mail
-from django.contrib.auth import get_user_model
-from .tokens import account_activation_token
 from django.contrib.auth import login
-from django.utils.http import urlsafe_base64_decode
 from django.conf import settings
-# Handler reset password
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 from django.template.loader import render_to_string
 from django.db.models.query_utils import Q
-from django.utils.http import urlsafe_base64_encode
 from django.contrib.auth.tokens import default_token_generator
-from django.utils.encoding import force_bytes
-from django.utils.http import urlsafe_base64_decode
 from .tokens import account_activation_token
 from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.utils.encoding import force_bytes, force_str
