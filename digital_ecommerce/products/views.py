@@ -1,36 +1,20 @@
 from django.shortcuts import render
 from django.views import View
+from .models import product,Catgory
+from django.shortcuts import render,get_object_or_404
 
 
 # Create your views here.
+'''class productview(View):
+    def get(self,request,catgory_slug=None):
+        product1=product.objects.filter(availble=True)#اون هایی که موجود اس
+        catgoris=Catgory.objects.all()
+        if catgory_slug:
+            catgory1=Catgory.objects.get(slug=catgory_slug)
+            product1=product.objects.filter(catgory=catgory1)
 
-class Cart1View(View):
-    def get(self, request):
-        return render(request, 'products/cart1.html')
-
-    def post(self, request):
-        pass
-
-
-class Cart3View(View):
-    def get(self, request):
-        return render(request, 'products/cart3.html')
-
-    def post(self, request):
-        pass
-
-
-class CategoryView(View):
-    def get(self, request):
-        return render(request, 'products/category.html')
-
-    def post(self, request):
-        pass
-
-
-class ProducView(View):
-    def get(self, request):
-        return render(request, 'products/product.html')
-
-    def post(self, request):
-        pass
+        return render(request,'home/home.html',{'products':product1,'catgoris':catgoris})'''
+class productdatailview(View):
+    def get(self,request,slug):
+        product1=get_object_or_404(product,slug=slug)
+        return render(request,'product/product.html',{'form':product1})

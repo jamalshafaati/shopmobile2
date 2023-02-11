@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.urls import reverse
 # Create your models here.
 class Catgory(models.Model):
     sub_slug=models.ForeignKey('self',on_delete=models.CASCADE,related_name='subcategory',null=True,blank=True)
@@ -15,20 +15,15 @@ class Catgory(models.Model):
     def __str__(self):
         return self.name
 class product(models.Model):
-    #class choce(models.TextChoices):
-    MEDIA_CHOICES = [
+    MEDIA_CHOICES =[
         ('Audio', (
             ('vinyl', 'Vinyl'),
-            ('cd', 'CD'),
-        )
-            ),
+            ('cd', 'CD'),)),
         ('Video', (
             ('vhs', 'VHS Tape'),
             ('dvd', 'DVD'),
-        )
-            ),
-        ('unknown', 'Unknown'),
-    ]
+        )),
+        ('unknown', 'Unknown'),]
     category=models.ManyToManyField(Catgory)
     name=models.CharField(max_length=11)
     price=models.IntegerField(help_text="براساس تومان")
@@ -37,7 +32,7 @@ class product(models.Model):
     slug=models.SlugField(unique=True,max_length=200)
     aviable=models.BooleanField(default=True)
     descriptions=models.TextField()
-    property1=models.CharField(max_length=200,choices=MEDIA_CHOICES)
+    property1=models.CharField(max_length=100,choices=MEDIA_CHOICES)
     crated=models.DateTimeField(auto_now_add=True)
     updeted=models.DateTimeField(auto_now=True)
 
