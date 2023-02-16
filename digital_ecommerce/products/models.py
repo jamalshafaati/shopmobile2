@@ -1,5 +1,6 @@
 from django.db import models
-
+from django.urls import reverse
+import django_filters
 # Create your models here.
 class Catgory(models.Model):
     sub_slug=models.ForeignKey('self',on_delete=models.CASCADE,related_name='subcategory',null=True,blank=True)
@@ -15,29 +16,16 @@ class Catgory(models.Model):
     def __str__(self):
         return self.name
 class product(models.Model):
-    #class choce(models.TextChoices):
-    MEDIA_CHOICES = [
-        ('Audio', (
-            ('vinyl', 'Vinyl'),
-            ('cd', 'CD'),
-        )
-            ),
-        ('Video', (
-            ('vhs', 'VHS Tape'),
-            ('dvd', 'DVD'),
-        )
-            ),
-        ('unknown', 'Unknown'),
-    ]
     category=models.ManyToManyField(Catgory)
     name=models.CharField(max_length=11)
     price=models.IntegerField(help_text="براساس تومان")
     datetime=models.DateTimeField()
-    image=models.ImageField()
+    color=models.CharField(max_length=100)
+    MedalType = models.TextChoices('MedalType', 'GOLD SILVER BRONZE')
+    garanti=models.CharField(max_length=110)
     slug=models.SlugField(unique=True,max_length=200)
     aviable=models.BooleanField(default=True)
     descriptions=models.TextField()
-    property1=models.CharField(max_length=200,choices=MEDIA_CHOICES)
     crated=models.DateTimeField(auto_now_add=True)
     updeted=models.DateTimeField(auto_now=True)
 
@@ -46,6 +34,30 @@ class product(models.Model):
 
     def __str__(self):
         return self.name
+class Image(models.Model):
+    product=models.ForeignKey(product,on_delete=models.CASCADE,related_name='productsub')
+    name=models.CharField(max_length=11)
+    Image=models.ImageField()
+
+class propert(models.Model):
+    product=models.ForeignKey(product,on_delete=models.CASCADE,related_name='productsubproper')
+    name=models.CharField(max_length=11)
+
+class Producta(models.Model):
+    producta=models.ForeignKey(product,on_delete=models.CASCADE,related_name='producta')
+    image=models.ForeignKey(Image,on_delete=models.CASCADE,related_name='image_producta')
+    propertya=models.ForeignKey(propert,on_delete=models.CASCADE,related_name='perppertu_producta')
+
+
+
+class ProductFilter(django_filters.FilterSet):
+    name = django_filters.CharFilter(lookup_expr='iexact')
+
+    class Meta:
+        model = product
+        fields = ['price',]
+
+
 
 
 
