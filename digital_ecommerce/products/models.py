@@ -1,9 +1,7 @@
 from django.db import models
 from django.urls import reverse
-<<<<<<< HEAD
+
 import django_filters
-=======
->>>>>>> origin/master
 # Create your models here.
 class Catgory(models.Model):
     sub_slug=models.ForeignKey('self',on_delete=models.CASCADE,related_name='subcategory',null=True,blank=True)
@@ -19,18 +17,6 @@ class Catgory(models.Model):
     def __str__(self):
         return self.name
 class product(models.Model):
-<<<<<<< HEAD
-=======
-    MEDIA_CHOICES =[
-        ('Audio', (
-            ('vinyl', 'Vinyl'),
-            ('cd', 'CD'),)),
-        ('Video', (
-            ('vhs', 'VHS Tape'),
-            ('dvd', 'DVD'),
-        )),
-        ('unknown', 'Unknown'),]
->>>>>>> origin/master
     category=models.ManyToManyField(Catgory)
     name=models.CharField(max_length=11)
     price=models.IntegerField(help_text="براساس تومان")
@@ -41,10 +27,7 @@ class product(models.Model):
     slug=models.SlugField(unique=True,max_length=200)
     aviable=models.BooleanField(default=True)
     descriptions=models.TextField()
-<<<<<<< HEAD
-=======
     property1=models.CharField(max_length=100,choices=MEDIA_CHOICES)
->>>>>>> origin/master
     crated=models.DateTimeField(auto_now_add=True)
     updeted=models.DateTimeField(auto_now=True)
 
@@ -67,14 +50,6 @@ class Producta(models.Model):
     image=models.ForeignKey(Image,on_delete=models.CASCADE,related_name='image_producta')
     propertya=models.ForeignKey(propert,on_delete=models.CASCADE,related_name='perppertu_producta')
 
-
-
-'''class ProductFilter(django_filters.FilterSet):
-    name = django_filters.CharFilter(lookup_expr='iexact')
-
-    class Meta:
-        model = product
-        fields = ['price',]'''
 
 
 
