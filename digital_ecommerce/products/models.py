@@ -50,12 +50,12 @@ class Producta(models.Model):
 
 
 
-class ProductFilter(django_filters.FilterSet):
+'''class ProductFilter(django_filters.FilterSet):
     name = django_filters.CharFilter(lookup_expr='iexact')
 
     class Meta:
         model = product
-        fields = ['price',]
+        fields = ['price',]'''
 
 
 
