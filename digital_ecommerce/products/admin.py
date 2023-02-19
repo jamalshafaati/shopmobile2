@@ -13,6 +13,4 @@ admin.site.register(propert)
 class productadmin(admin.ModelAdmin):
     raw_id_fields = ('category',)
 
-@admin.register(Producta)
-class productadmin1(admin.ModelAdmin):
-    raw_id_fields = ('image','propertya',)
+

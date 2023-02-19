@@ -14,6 +14,9 @@ class Catgory(models.Model):
         verbose_name = 'my_catgory'
         verbose_name_plural = 'categories'
 
+    def get_absolute_url(self):
+        return reverse('products:cattgory_slugg', args=[self.slug])
+
     def __str__(self):
         return self.name
 class product(models.Model):
@@ -27,7 +30,6 @@ class product(models.Model):
     slug=models.SlugField(unique=True,max_length=200)
     aviable=models.BooleanField(default=True)
     descriptions=models.TextField()
-    property1=models.CharField(max_length=100,choices=MEDIA_CHOICES)
     crated=models.DateTimeField(auto_now_add=True)
     updeted=models.DateTimeField(auto_now=True)
 
@@ -36,22 +38,20 @@ class product(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('products:product_dateil', args=[self.slug])
 class Image(models.Model):
-    product=models.ForeignKey(product,on_delete=models.CASCADE,related_name='productsub')
-    name=models.CharField(max_length=11)
-    Image=models.ImageField()
+    product = models.ForeignKey(product, on_delete=models.CASCADE, related_name='productsub')
+    name = models.CharField(max_length=11)
+    Image = models.ImageField()
 
 class propert(models.Model):
-    product=models.ForeignKey(product,on_delete=models.CASCADE,related_name='productsubproper')
-    name=models.CharField(max_length=11)
+    product = models.ForeignKey(product, on_delete=models.CASCADE, related_name='productsubproper')
+    name = models.CharField(max_length=11)
 
 class Producta(models.Model):
-    producta=models.ForeignKey(product,on_delete=models.CASCADE,related_name='producta')
-    image=models.ForeignKey(Image,on_delete=models.CASCADE,related_name='image_producta')
-    propertya=models.ForeignKey(propert,on_delete=models.CASCADE,related_name='perppertu_producta')
-
-
-
+    pass
 
 
 

@@ -1,22 +1,15 @@
 from django.urls import path
-<<<<<<< HEAD
-from .views import productview,productdatailview
-=======
-from .views import productdatailview
->>>>>>> origin/master
+from .views import (ProductListView,product_list_view)
+
 
 app_name = 'products'
 
 urlpatterns = [
-<<<<<<< HEAD
-   # path('cart1', Cart3View.as_view(), name='cart1_page'),
-    #path('cart3', Cart3View.as_view(), name='cart3_page'),
-   # path('category', CategoryView.as_view(), name='category_page'),
-    path('product', productview.as_view(), name='product_page'),
-    path('<slug:slug>/',productdatailview.as_view(),name='product_dateil')
-=======
-    #path('cart3', Cart3View.as_view(), name='cart3_page'),
-    #path('category', CategoryView.as_view(), name='category_page'),
-    path('<slug:slug>/', productdatailview.as_view(), name='product_dateil'),
->>>>>>> origin/master
+    #path('<slug:slug>/',productdatailview.as_view(),name='product_dateil'),
+    #path('catgory/<slug:catgory_slug>/',productview.as_view(),name='cattgory_slugg'),
+    #ath('product', productview.as_view(), name='product_dateil'),
+    #path('product', productdatailview.as_view(), name='product_dateil'),
+    path('products', ProductListView.as_view()),
+    path('products-fbv', product_list_view),
+
 ]
