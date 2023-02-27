@@ -17,6 +17,7 @@ class Catgory(models.Model):
     def get_absolute_url(self):
         return reverse('products:cattgory_slugg', args=[self.slug])
 
+
     def __str__(self):
         return self.name
 class product(models.Model):
@@ -32,6 +33,8 @@ class product(models.Model):
     descriptions=models.TextField()
     crated=models.DateTimeField(auto_now_add=True)
     updeted=models.DateTimeField(auto_now=True)
+    image=models.ImageField()
+    time=models.DateField()
 
     class Meta:
         ordering=('name',)
@@ -49,11 +52,6 @@ class Image(models.Model):
 class propert(models.Model):
     product = models.ForeignKey(product, on_delete=models.CASCADE, related_name='productsubproper')
     name = models.CharField(max_length=11)
-
-class Producta(models.Model):
-    pass
-
-
 
 
 
