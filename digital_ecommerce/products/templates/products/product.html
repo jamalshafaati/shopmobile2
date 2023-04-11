@@ -51,44 +51,17 @@
                 <li><a href="#">وسایل دیجیتال</a></li>
                 <li><a href="#">موبایل</a></li>
                 <li><a href="#">هوآوی</a></li>
-                <li class="active">گوشی موبایل سامسونگ مدل s10 دو سیم‌کارت ظرفیت 64 گیگابایت</li>
+                <li class="active">{{ products.name }}</li>
             </ul>
         </div>
         <div class="_p_frame">
             <div class="row">
                 <div class="_d_product_page" id="product_page">
-                    <div class="_d_product_slider">
-                        <div class="_d_product_slick_nav">
-                            <a href="assets/img/product/2.png" data-zoom-img="assets/img/product/2.png" class="_d_item">
-                                <img data-lazy="assets/img/product/2.png" alt=""/>
-                            </a>
-                            <a href="assets/img/product/1.png" data-zoom-img="assets/img/product/1.png" class="_d_item">
-                                <img data-lazy="assets/img/product/1.png" alt=""/>
-                            </a>
-                            <a href="assets/img/product/2.png" data-zoom-img="assets/img/product/2.png" class="_d_item">
-                                <img data-lazy="assets/img/product/2.png" alt=""/>
-                            </a>
-                            <a href="assets/img/product/1.png" data-zoom-img="assets/img/product/1.png" class="_d_item">
-                                <img data-lazy="assets/img/product/1.png" alt=""/>
-                            </a>
-                            <a href="assets/img/product/2.png" data-zoom-img="assets/img/product/2.png" class="_d_item">
-                                <img data-lazy="assets/img/product/2.png" alt=""/>
-                            </a>
-                            <a href="assets/img/product/1.png" data-zoom-img="assets/img/product/1.png" class="_d_item">
-                                <img data-lazy="assets/img/product/1.png" alt=""/>
-                            </a>
-                            <a href="assets/img/product/2.png" data-zoom-img="assets/img/product/2.png" class="_d_item">
-                                <img data-lazy="assets/img/product/2.png" alt=""/>
-                            </a>
-                            <a href="assets/img/product/1.png" data-zoom-img="assets/img/product/1.png" class="_d_item">
-                                <img data-lazy="assets/img/product/1.png" alt=""/>
-                            </a>
-                        </div>
                         <div class="main_image_product">
-                            <img src="{% static 'img/product/2.png' %}" alt="" id="zoom"
+                            <img src="{{ product.images.url }}" alt="" id="zoom"
                                  data-zoom-image="assets/img/product/2.png"/>
                         </div>
-                    </div>
+
                     <div class="_d_product_info_holder">                        <h1 class="_d_main_title">{{ product.name }}</h1>
                 <h1 class="_d_main_title">{{ product.name }}</h1>
 
@@ -100,18 +73,18 @@
                                     </div>
                                     <div class="_d_item" style="display: none;">
                                         <div class="_d_caption">گارانتی:</div>
-                                        <div class="_d_value">{{ product.garanti }}</div>
+                                        <div class="_d_value"></div>
                                     </div>
                                     <div class="_d_item">
                                         <div class="_d_caption">گارانتی:</div>
                                         <select class="form-control _d_guaranty_option">
-                                            <option value="105">2 سال سام سرویس
+                                            <option value="105">{{products.garanti}}
                                             </option>
                                         </select></div>
                                     <div class="_d_item _d_color_serie">
                                         <div class="_d_caption">رنگ:</div>
                                         <div style="display: inline-block">
-                                            <div class="_d_color_name">{{ product.color }}</div>
+                                            <div class="_d_color_name"></div>
                                             <div data-colorname="black" data-colorid="3_"
                                                  class="active _d_color_option _d_disabled">
                                                 <div class="_d_color_demo"
@@ -119,7 +92,7 @@
                                             </div>
                                         </div>
                                         <div style="display: inline-block">
-                                            <div class="_d_color_name">مشکی</div>
+                                            <div class="_d_color_name">{{ products.color}}</div>
                                             <div data-colorname="black" data-colorid="3_"
                                                  class="active _d_color_option _d_disabled">
                                                 <div class="_d_color_demo"

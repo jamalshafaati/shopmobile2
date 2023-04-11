@@ -4,9 +4,10 @@ from .models import product,Catgory,Image
 from django.shortcuts import render,get_object_or_404
 from django.views.generic import ListView, DetailView
 from django.http import Http404
-from .filters import productfilter,renage_filter
-
-
+from .filters import productfilter,nameproductfilter
+from django.core.paginator import Paginator
+from django.urls import reverse
+import itertools
 
 '''class productview(View):
     def get(self,request,catgory_slug=None):
@@ -16,42 +17,47 @@ from .filters import productfilter,renage_filter
             catgory1=Catgory.objects.get(slug=catgory_slug)
             products=products.objects.filter(catgory=catgory1)
 
-        return render(request,'products/category.html',{'products':products,'catgoris':catgoris})
-class productdatailview(View):
-    def get(self,request,slug):
-        products=get_object_or_404(product,slug=slug)
-        return render(request,'products/product.html',{'product':products})
+        return render(request,'products/category.html',{'products':products,'catgoris':catgoris}
 '''
-class ProductListView(ListView):
+class productdatailview(View):
+    template_name="products/product.html"
+    def get(self,request,slug):
+        image=Image.objects.all()
+        products=get_object_or_404(product,slug=slug)
+        context={'products': products,
+                 'image':image}
+        return render(request, 'products/product.html', context)
+
+class productcategory(View):
     template_name = "products/category.html"
+    def get(self,request):
+        products =product.objects.all()
+        image=Image.objects.all()
+        if 'price_min' in request.GET:
+            price_min = request.GET['price_min']
+            products = products.filter(price__gte=price_min)
+
+        if 'price_max' in request.GET:
+            price_max = request.GET['price_max']
+            products = products.filter(price__lte=price_max)
+
+        if 'name' in request.GET:
+            name = request.GET['name']
+            products = products.filter(name=name)
+        if 'filter' in request.GET and request.GET['filter'] == 'cheapest':
+            products = product.objects.order_by('price')
 
 
-    # def get_context_data(self, *args, object_list=None, **kwargs):
-    #     context = super(ProductListView, self).get_context_data(*args, **kwargs)
-    #     print(context)
-    #     return context
+        if 'filter' in request.GET and request.GET['filter'] == 'priceg':
+            products = product.objects.order_by('-price')
 
-    def get_queryset(self):
-        return product.objects.all()
+        if 'filter' in request.GET and request.GET['filter'] == 'created':
+            products = product.objects.order_by('-crated')
 
-def product_list_view(request):
-    products = product.objects.all()
-    image=Image.objects.all()
-    ob_filter=productfilter(request.GET,queryset=products)
-    products=ob_filter.qs
-    f1 = renage_filter({'price_min': '11'}, queryset=products)
-    # Max-Only: Books costing less than 19€
-    f2 = renage_filter({'price_max': '19'}, queryset=products)
 
-    context = {
-        "object_list": products,
-        "image":image,
-        "filters":ob_filter,
-        "f1":f1,
-        "f2":f2,
+        context = {
+            "object_list": products,
+            "image":image,
+        }
 
-    }
-    return render(request, "products/category.html", context)
-def productless(request):
-    return render(request, "products/less.html", )
-
+        return render(request,self.template_name , context)

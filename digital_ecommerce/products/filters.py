@@ -12,12 +12,18 @@ class productfilter(django_filters.FilterSet):
     class Meta:
         model=product
         fields=( 'price__lt','price__gt',)
-class renage_filter(django_filters.RangeFilter):
-    """Filter for Books by Price"""
-    price =django_filters.RangeFilter()
+
+class nameproductfilter(django_filters.FilterSet):
+    name = django_filters.CharFilter(field_name='name',lookup_expr='icontains',label='جست وجو',)
+    #has_category = django_filters.BooleanFilter(field_name='name', lookup_expr='isnull', exclude=True)
+    #category = django_filters.ChoiceFilter(field_name='category',)
+    #slug = django_filters.CharFilter(lookup_expr='icontains')
 
     class Meta:
         model = product
-        fields = ['price']
-
+        fields = ['name',]
+       # fields = {
+           ##
+        # 'slug': ['exact', 'icontains'],
+      #  }
 

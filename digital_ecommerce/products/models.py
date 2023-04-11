@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 
+
 import django_filters
 # Create your models here.
 class Catgory(models.Model):
@@ -23,7 +24,7 @@ class Catgory(models.Model):
 class product(models.Model):
     category=models.ManyToManyField(Catgory)
     name=models.CharField(max_length=11)
-    price=models.IntegerField(help_text="براساس تومان")
+    price=models.DecimalField(max_digits=8, decimal_places=2,help_text="براساس تومان")
     datetime=models.DateTimeField()
     color=models.CharField(max_length=100)
     MedalType = models.TextChoices('MedalType', 'GOLD SILVER BRONZE')
@@ -33,8 +34,9 @@ class product(models.Model):
     descriptions=models.TextField()
     crated=models.DateTimeField(auto_now_add=True)
     updeted=models.DateTimeField(auto_now=True)
-    image=models.ImageField()
+    images=models.ImageField(upload_to='products/%Y/%m/%d')
     time=models.DateField()
+    #property =models.ManyToManyField('propert', related_name='products',blank=True)
 
     class Meta:
         ordering=('name',)
@@ -46,12 +48,16 @@ class product(models.Model):
         return reverse('products:product_dateil', args=[self.slug])
 class Image(models.Model):
     product = models.ForeignKey(product, on_delete=models.CASCADE, related_name='productsub')
-    name = models.CharField(max_length=11)
     Image = models.ImageField()
+    def __str__(self):
+        return self.product.name
 
 class propert(models.Model):
     product = models.ForeignKey(product, on_delete=models.CASCADE, related_name='productsubproper')
     name = models.CharField(max_length=11)
+
+    def __str__(self):
+        return self.product.name
 
 
 
